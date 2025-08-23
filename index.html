@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Biomedical Laboratory - Interactive Learning Platform</title>
+    <meta name="description" content="Explore cardiovascular and respiratory physiology through interactive ECG, SpO₂, and Spirometry simulations">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">🧪</div>
+                    <div class="logo-text">
+                        <h1>Virtual Biomedical Lab</h1>
+                        <p>Interactive Learning Platform</p>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <div class="info-item">
+                        <span class="icon">👨‍🔬</span>
+                        <span>Professional Training</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🎓</span>
+                        <span>Certified Learning</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">⚡</span>
+                        <span>Interactive Simulations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showSection('home')" class="nav-link active">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a></li>
+                    <li><a href="#" onclick="showSection('ecg')" class="nav-link">
+                        <span class="nav-icon">📈</span>
+                        <span>ECG</span>
+                    </a></li>
+                    <li><a href="#" onclick="showSection('spo2')" class="nav-link">
+                        <span class="nav-icon">🫁</span>
+                        <span>SpO₂</span>
+                    </a></li>
+                    <li><a href="#" onclick="showSection('spirometry')" class="nav-link">
+                        <span class="nav-icon">💨</span>
+                        <span>Spirometry</span>
+                    </a></li>
+                    <li><a href="#" onclick="showSection('certificates')" class="nav-link">
+                        <span class="nav-icon">🏆</span>
+                        <span>Certificates</span>
+                    </a></li>
+                </ul>
+                <div class="nav-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+<section id="home" class="section active">
+    <div class="container">
+        <!-- Hero -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>What is Virtual Biomedical Lab?</h2>
+                <p class="hero-subtitle">
+                    The Virtual Biomedical Laboratory is an <strong>interactive e-learning platform</strong> 
+                    where students, healthcare professionals, and enthusiasts can explore 
+                    cardiovascular and respiratory physiology through simulations of 
+                    <em>ECG</em>, <em>SpO₂</em>, and <em>Spirometry</em>.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span>Visualize Real-time Data</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎓</span>
+                        <span>Learn by Doing</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚙️</span>
+                        <span>Interactive Controls</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🏆</span>
+                        <span>Earn Certificates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Overview Cards -->
+        <div class="experiment-grid">
+            <div class="experiment-card">
+                <div class="card-icon">📈</div>
+                <div class="card-header">
+                    <h3>Electrocardiogram (ECG)</h3>
+                    <span class="card-badge">Cardiac</span>
+                </div>
+                <div class="card-content">
+                    <p>Simulate ECG waveforms and study the electrical activity of the heart.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="difficulty">Beginner Friendly</span>
+                    <button class="btn btn-primary" onclick="showSection('ecg')">Try ECG →</button>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <div class="card-icon">🫁</div>
+                <div class="card-header">
+                    <h3>Oxygen Saturation (SpO₂)</h3>
+                    <span class="card-badge">Respiratory</span>
+                </div>
+                <div class="card-content">
+                    <p>Understand oxygen transport by visualizing SpO₂ levels in real time.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="difficulty">Intermediate</span>
+                    <button class="btn btn-primary" onclick="showSection('spo2')">Explore SpO₂ →</button>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <div class="card-icon">💨</div>
+                <div class="card-header">
+                    <h3>Spirometry</h3>
+                    <span class="card-badge">Pulmonary</span>
+                </div>
+                <div class="card-content">
+                    <p>Measure lung function, volume, and airflow through interactive spirometry.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="difficulty">Advanced</span>
+                    <button class="btn btn-primary" onclick="showSection('spirometry')">Start Spirometry →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
